@@ -1,0 +1,53 @@
+.font-sm-regular, .head-bar p {
+  font-size: 14px;
+}
+
+.head-bar {
+  background-color: #00A0E9;
+  height: 26px;
+}
+.head-bar p {
+  color: white;
+  max-width: 1300px;
+  margin: 0 auto;
+  padding-left: 145px;
+  line-height: 26px;
+}
+
+.head-title {
+  display: flex;
+  justify-content: space-between;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+.head-title h1 {
+  height: 98px;
+  display: flex;
+  align-items: center;
+}
+.head-title .store-info {
+  display: flex;
+  align-items: center;
+}
+.head-title .store-info a {
+  display: inline-block;
+}
+.head-title .store-info a:first-child {
+  margin-right: 10px;
+}
+.head-title .store-info a .address {
+  width: 264px;
+}
+.head-title .store-info a .reserve {
+  width: 335px;
+}
+
+.mainvisual {
+  text-align: center;
+  border-top: 3px solid #EBECE7;
+  border-bottom: 3px solid #EBECE7;
+  height: 352px;
+}
+.mainvisual img {
+  display: inline;
+}/*# sourceMappingURL=style.css.map */

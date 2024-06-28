@@ -1,0 +1,60 @@
+@use 'component' as *;
+
+.head-bar{
+    background-color: $cBlue;
+    height: 26px;
+
+    & p{
+        color: $cWhite;
+        @extend .font-sm-regular;
+        max-width: $max-width;
+        margin: 0 auto;
+        padding-left: 145px;
+        line-height: 26px;
+    }
+}
+
+.head-title{
+    display: flex;
+    justify-content: space-between;
+    max-width: $max-width;
+    margin: 0 auto;
+
+    & h1{
+        height: 98px;
+        display: flex;
+        align-items: center;
+    }
+
+
+    & .store-info{
+        display: flex;
+        align-items: center;
+        & a{
+            display: inline-block;
+            &:first-child{
+                margin-right: 10px;
+            }
+
+            & .address{
+                width: 264px;
+            }
+    
+            & .reserve{
+                width: 335px;
+            }
+        }
+
+    }
+}
+
+.mainvisual{
+    text-align: center;
+    border-top: 3px solid $cBorder-color;
+    border-bottom: 3px solid $cBorder-color;
+    height: 352px;
+
+    & img{
+        display: inline;
+    }
+}
