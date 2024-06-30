@@ -6,7 +6,7 @@
   font-size: 14px;
 }
 
-.font-md-regular, .container .new dl dt, .container .voice .content article .item .voice__content, .container .voice .content article .item .voice__course {
+.font-md-regular, .container main .new dl dt, .container main .voice .content article .item .voice__content, .container main .voice .content article .item .voice__course {
   font-size: 16px;
 }
 
@@ -14,7 +14,7 @@
   font-size: 18px;
 }
 
-.font-sm-bold, .container .new a {
+.font-sm-bold, .container main .new a {
   font-size: 14px;
   font-weight: 600;
 }
@@ -24,7 +24,7 @@
   font-weight: 600;
 }
 
-.font-xl-bold, .container .new dl dd, .container .voice .content article .item h4 {
+.font-xl-bold, .container main .new dl dd, .container main .voice .content article .item h4 {
   font-size: 22px;
   font-weight: 600;
 }
@@ -109,6 +109,8 @@ header .nav-menu ul li:last-child a {
   margin: 0 auto;
   margin-top: 40px;
   padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
 }
 .container section {
   margin-bottom: 40px;
@@ -129,18 +131,21 @@ header .nav-menu ul li:last-child a {
   height: 30px;
   background-color: #00A0E9;
 }
-.container .new dl {
+.container main {
+  width: 74%;
+}
+.container main .new dl {
   margin-top: 21px;
 }
-.container .new dl dt {
+.container main .new dl dt {
   color: #AAAAAA;
   margin-bottom: 4px;
 }
-.container .new dl dd {
+.container main .new dl dd {
   color: #00A0E9;
   margin-bottom: 16px;
 }
-.container .new a {
+.container main .new a {
   display: block;
   position: relative;
   width: 190px;
@@ -154,7 +159,7 @@ header .nav-menu ul li:last-child a {
   margin-left: auto;
   border-radius: 6px;
 }
-.container .new a::before {
+.container main .new a::before {
   display: block;
   content: "";
   position: absolute;
@@ -166,7 +171,7 @@ header .nav-menu ul li:last-child a {
   transform: translateY(-50%) rotate(-30deg);
   transform-origin: right;
 }
-.container .new a::after {
+.container main .new a::after {
   display: block;
   content: "";
   position: absolute;
@@ -178,32 +183,32 @@ header .nav-menu ul li:last-child a {
   transform: translateY(-50%) rotate(30deg);
   transform-origin: right;
 }
-.container .course .description {
+.container main .course .description {
   margin: 20px 0;
 }
-.container .course .course-item {
+.container main .course .course-item {
   display: flex;
   justify-content: space-between;
 }
-.container .voice .content {
+.container main .voice .content {
   margin-top: 24px;
 }
-.container .voice .content article {
+.container main .voice .content article {
   display: flex;
   padding: 25px;
   border: 1px solid #CECEBF;
   margin-bottom: 25px;
 }
-.container .voice .content article .item {
+.container main .voice .content article .item {
   margin-left: 25px;
 }
-.container .voice .content article .item h4 {
+.container main .voice .content article .item h4 {
   height: 36px;
   color: #00A0E9;
   line-height: 30.8px;
   position: relative;
 }
-.container .voice .content article .item h4::after {
+.container main .voice .content article .item h4::after {
   content: "";
   position: absolute;
   bottom: 0;
@@ -212,32 +217,35 @@ header .nav-menu ul li:last-child a {
   height: 1px;
   background-color: #CCCCCC;
 }
-.container .voice .content article .item .voice__content {
+.container main .voice .content article .item .voice__content {
   margin-top: 20px;
   margin-bottom: 40px;
   line-height: 28.8px;
 }
-.container .voice .content article .item .voice__course {
+.container main .voice .content article .item .voice__course {
   text-align: end;
 }
-.container .store-info {
+.container main .store-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   border: 1px solid #CECEBF;
   padding: 35px;
 }
-.container .store-info a:first-child {
+.container main .store-info a:first-child {
   width: 264px;
   position: relative;
 }
-.container .store-info a:last-child {
+.container main .store-info a:last-child {
   width: 335px;
 }
-.container .store-info span {
+.container main .store-info span {
   display: block;
   width: 1px;
   height: 64px;
   margin: 0 35px;
   background-color: #CECEBF;
+}
+.container aside {
+  width: 24%;
 }/*# sourceMappingURL=style.css.map */
