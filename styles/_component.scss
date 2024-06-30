@@ -1,9 +1,33 @@
 $breakPoint: 900px;
-$max-width: 1300px;
+$max-width-head: 1300px;
+$max-width-body: 1000px;
 $cBlue: #00A0E9;
 $cWhite: white;
-$cBorder-color: #EBECE7;
+$cBlack: #333333;
+$cBorder-color-mv: #EBECE7;
+$cBorder-color-nav: #CCCCCC;
+
+
+.font-xs-regular{
+    font-size: 12px;
+}
 
 .font-sm-regular{
     font-size: 14px;
+}
+
+.font-md-regular{
+    font-size: 16px;
+}
+
+.font-lg-regular{
+    font-size: 18px;
+}
+
+.font-sm-bold{
+    font-size: 14px;
+}
+
+.font-md-bold{
+    font-size: 16px;
 }

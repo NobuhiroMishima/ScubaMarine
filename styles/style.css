@@ -1,53 +1,98 @@
-.font-sm-regular, .head-bar p {
+.font-xs-regular {
+  font-size: 12px;
+}
+
+.font-sm-regular, header .head-bar p {
   font-size: 14px;
 }
 
-.head-bar {
+.font-md-regular {
+  font-size: 16px;
+}
+
+.font-lg-regular {
+  font-size: 18px;
+}
+
+.font-sm-bold {
+  font-size: 14px;
+}
+
+.font-md-bold, header .nav-menu ul li a {
+  font-size: 16px;
+}
+
+header {
+  box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+}
+header .head-bar {
   background-color: #00A0E9;
   height: 26px;
 }
-.head-bar p {
+header .head-bar p {
   color: white;
-  max-width: 1300px;
+  max-width: 1000px;
   margin: 0 auto;
-  padding-left: 145px;
   line-height: 26px;
 }
-
-.head-title {
+header .head-title {
   display: flex;
   justify-content: space-between;
   max-width: 1300px;
   margin: 0 auto;
 }
-.head-title h1 {
+header .head-title h1 {
   height: 98px;
   display: flex;
   align-items: center;
 }
-.head-title .store-info {
+header .head-title .store-info {
   display: flex;
   align-items: center;
 }
-.head-title .store-info a {
+header .head-title .store-info a {
   display: inline-block;
 }
-.head-title .store-info a:first-child {
+header .head-title .store-info a:first-child {
   margin-right: 10px;
 }
-.head-title .store-info a .address {
+header .head-title .store-info a .address {
   width: 264px;
 }
-.head-title .store-info a .reserve {
+header .head-title .store-info a .reserve {
   width: 335px;
 }
-
-.mainvisual {
+header .mainvisual {
   text-align: center;
   border-top: 3px solid #EBECE7;
   border-bottom: 3px solid #EBECE7;
   height: 352px;
 }
-.mainvisual img {
+header .mainvisual img {
   display: inline;
+}
+header .nav-menu {
+  max-width: 1000px;
+  margin: 23px auto 24px auto;
+}
+header .nav-menu ul {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+}
+header .nav-menu ul li {
+  flex-grow: 1;
+  width: 100%;
+}
+header .nav-menu ul li a {
+  display: block;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 0px;
+  border-left: 1px solid #CCCCCC;
+  color: #333333;
+}
+header .nav-menu ul li:last-child a {
+  border-right: 1px solid #CCCCCC;
 }/*# sourceMappingURL=style.css.map */
