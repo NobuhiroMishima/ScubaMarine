@@ -6,7 +6,7 @@
   font-size: 14px;
 }
 
-.font-md-regular, .container .new dl dt {
+.font-md-regular, .container .new dl dt, .container .voice .content article .item .voice__content, .container .voice .content article .item .voice__course {
   font-size: 16px;
 }
 
@@ -24,7 +24,7 @@
   font-weight: 600;
 }
 
-.font-xl-bold, .container .new dl dd {
+.font-xl-bold, .container .new dl dd, .container .voice .content article .item h4 {
   font-size: 22px;
   font-weight: 600;
 }
@@ -110,6 +110,9 @@ header .nav-menu ul li:last-child a {
   margin-top: 40px;
   padding: 0 16px;
 }
+.container section {
+  margin-bottom: 40px;
+}
 .container h2 {
   background-color: #E7ECD5;
   position: relative;
@@ -125,9 +128,6 @@ header .nav-menu ul li:last-child a {
   width: 7px;
   height: 30px;
   background-color: #00A0E9;
-}
-.container .new {
-  margin-bottom: 40px;
 }
 .container .new dl {
   margin-top: 21px;
@@ -177,4 +177,67 @@ header .nav-menu ul li:last-child a {
   background-color: white;
   transform: translateY(-50%) rotate(30deg);
   transform-origin: right;
+}
+.container .course .description {
+  margin: 20px 0;
+}
+.container .course .course-item {
+  display: flex;
+  justify-content: space-between;
+}
+.container .voice .content {
+  margin-top: 24px;
+}
+.container .voice .content article {
+  display: flex;
+  padding: 25px;
+  border: 1px solid #CECEBF;
+  margin-bottom: 25px;
+}
+.container .voice .content article .item {
+  margin-left: 25px;
+}
+.container .voice .content article .item h4 {
+  height: 36px;
+  color: #00A0E9;
+  line-height: 30.8px;
+  position: relative;
+}
+.container .voice .content article .item h4::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+  background-color: #CCCCCC;
+}
+.container .voice .content article .item .voice__content {
+  margin-top: 20px;
+  margin-bottom: 40px;
+  line-height: 28.8px;
+}
+.container .voice .content article .item .voice__course {
+  text-align: end;
+}
+.container .store-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 1px solid #CECEBF;
+  padding: 35px;
+}
+.container .store-info a:first-child {
+  width: 264px;
+  position: relative;
+}
+.container .store-info a:last-child {
+  width: 335px;
+}
+.container .store-info span {
+  display: block;
+  width: 1px;
+  height: 64px;
+  margin: 0 35px;
+  background-color: #CECEBF;
 }/*# sourceMappingURL=style.css.map */

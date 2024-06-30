@@ -103,6 +103,10 @@ header{
     margin-top: 40px;
     padding: 0 16px;
 
+    //セクション共通のレイアウト
+    & section{
+        margin-bottom: 40px;
+    }
     //見出し共通のレイアウト
     & h2{
         background-color: $cPaleGreen;
@@ -123,7 +127,7 @@ header{
     }
 
     .new{
-        margin-bottom: 40px;
+
         & dl{
             margin-top: 21px;
 
@@ -186,15 +190,90 @@ header{
     }
 
     .course{
+        & .description{
+            margin: 20px 0;
+        }
 
+        & .course-item{
+            display: flex;
+            justify-content: space-between;
+        }
     }
 
     .voice{
+        & .content{
+            margin-top: 24px;
 
+            & article{
+                display: flex;
+                padding: 25px;
+                border: 1px solid $cBorder-color-voice;
+                margin-bottom: 25px;
+
+                & .item{
+                    margin-left: 25px;
+
+                    & h4{
+                        height: 36px;
+                        color: $cBlue;
+                        @extend .font-xl-bold;
+                        line-height: 30.8px;
+                        position: relative;
+
+                        &::after{
+                            content: '';
+                            position: absolute;
+                            bottom: 0;
+                            left: 0;
+                            width: 100%;
+                            height: 1px;
+                            background-color: $cBorder-color-nav;
+
+                        }
+                    }
+
+                    & .voice__content{
+                        margin-top: 20px;
+                        margin-bottom: 40px;
+                        @extend .font-md-regular;
+                        line-height: 28.8px;
+                    }
+
+                    & .voice__course{
+                        text-align: end;
+                        @extend .font-md-regular;
+                    }
+                }
+            }
+        }
     }
 
     .store-info{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border: 1px solid $cBorder-color-voice;
+        padding: 35px;
+        
 
+        & a{
+            &:first-child{
+                width: 264px;
+                position: relative;
+            }
+
+            &:last-child{
+                width: 335px;
+            }
+        }
+
+        & span{
+            display: block;
+            width: 1px;
+            height: 64px;
+            margin: 0 35px;
+            background-color: $cBorder-color-voice;
+        }
     }
 }
 
