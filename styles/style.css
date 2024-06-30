@@ -95,4 +95,11 @@ header .nav-menu ul li a {
 }
 header .nav-menu ul li:last-child a {
   border-right: 1px solid #CCCCCC;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  margin-top: 40px;
+  padding: 0 16px;
 }/*# sourceMappingURL=style.css.map */

@@ -97,3 +97,14 @@ header{
     }
 }
 
+.container{
+    max-width: $max-width-body;
+    margin: 0 auto;
+    margin-top: 40px;
+    padding: 0 16px;
+
+    .new{
+
+    }
+}
+
