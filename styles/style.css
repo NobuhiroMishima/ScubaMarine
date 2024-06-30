@@ -1,12 +1,13 @@
+@charset "UTF-8";
 .font-xs-regular, .container aside .blog dt {
   font-size: 12px;
 }
 
-.font-sm-regular, header .head-bar p, .container aside .shop ul li {
+.font-sm-regular, header .head-bar p, .container aside .shop ul li, footer .copy p {
   font-size: 14px;
 }
 
-.font-md-regular, .container main .new dl dt, .container main .voice .content article .item .voice__content, .container main .voice .content article .item .voice__course {
+.font-md-regular, .container main .new dl dt, .container main .course .description, .container main .voice .content article .item .voice__content, .container main .voice .content article .item .voice__course {
   font-size: 16px;
 }
 
@@ -14,19 +15,23 @@
   font-size: 18px;
 }
 
-.font-sm-bold, .container main .new a {
+.font-sm-bold, .container main .new a, footer .nav-menu ul li a {
   font-size: 14px;
   font-weight: 600;
 }
 
-.font-md-bold, header .nav-menu ul li a, .container aside .blog dd, footer .nav-menu ul li a {
+.font-md-bold, header .nav-menu ul li a, .container aside .blog dd {
   font-size: 16px;
   font-weight: 600;
 }
 
-.font-xl-bold, .container main .new dl dd, .container main .voice .content article .item h4 {
+.font-xl-bold, .container h2, .container h3, .container main .new dl dd, .container main .voice .content article .item h4 {
   font-size: 22px;
   font-weight: 600;
+}
+
+body {
+  font-family: "メイリオ", sans-serif;
 }
 
 header {
@@ -63,7 +68,7 @@ header .head-title .store-info a {
   display: inline-block;
 }
 header .head-title .store-info a:first-child {
-  margin-right: 10px;
+  margin-right: 18px;
 }
 header .head-title .store-info a .address {
   width: 264px;
@@ -72,13 +77,12 @@ header .head-title .store-info a .reserve {
   width: 335px;
 }
 header .mainvisual {
-  text-align: center;
   border-top: 3px solid #EBECE7;
   border-bottom: 3px solid #EBECE7;
-  height: 352px;
 }
 header .mainvisual img {
-  display: inline;
+  display: block;
+  margin: 0 auto;
 }
 header .nav-menu {
   max-width: 1032px;
@@ -118,7 +122,7 @@ header .nav-menu ul li:last-child a {
   position: relative;
   padding-left: 27px;
   height: 50px;
-  line-height: 50px;
+  line-height: 55px;
 }
 .container h2::before {
   content: "";
@@ -132,7 +136,6 @@ header .nav-menu ul li:last-child a {
 .container h3 {
   position: relative;
   padding-left: 17px;
-  height: 30px;
   line-height: 30px;
   margin-bottom: 10px;
 }
@@ -146,7 +149,7 @@ header .nav-menu ul li:last-child a {
   background-color: #00A0E9;
 }
 .container main {
-  width: 74%;
+  width: 72%;
 }
 .container main section {
   margin-bottom: 40px;
@@ -171,7 +174,7 @@ header .nav-menu ul li:last-child a {
   background-color: #F39800;
   color: white;
   text-decoration: none;
-  line-height: 37px;
+  line-height: 40px;
   margin-top: 12px;
   margin-left: auto;
   border-radius: 6px;
@@ -207,6 +210,9 @@ header .nav-menu ul li:last-child a {
   display: flex;
   justify-content: space-between;
 }
+.container main .course .course-item img {
+  width: 32%;
+}
 .container main .voice .content {
   margin-top: 24px;
 }
@@ -216,11 +222,14 @@ header .nav-menu ul li:last-child a {
   border: 1px solid #CECEBF;
   margin-bottom: 25px;
 }
+.container main .voice .content article img {
+  height: 100%;
+}
 .container main .voice .content article .item {
   margin-left: 25px;
 }
 .container main .voice .content article .item h4 {
-  height: 36px;
+  padding-bottom: 5px;
   color: #00A0E9;
   line-height: 30.8px;
   position: relative;
@@ -264,7 +273,7 @@ header .nav-menu ul li:last-child a {
   background-color: #CECEBF;
 }
 .container aside {
-  width: 24%;
+  width: 26%;
 }
 .container aside section {
   margin-bottom: 30px;
@@ -309,9 +318,8 @@ footer .nav-menu {
 footer .nav-menu ul {
   max-width: 1032px;
   margin: 0 auto;
-  padding: 19.5px 0;
+  padding: 19.5px 15px;
   list-style: none;
-  padding-left: 0;
   display: flex;
 }
 footer .nav-menu ul li {
@@ -333,15 +341,18 @@ footer .footer-info {
   max-width: 1032px;
   margin: 0 auto;
   text-align: center;
-}
-footer .footer-info img {
-  display: inline-block;
+  display: flex;
+  justify-content: space-evenly;
 }
 footer .footer-info img.logo {
   width: 300px;
-  margin: 44px 64px 40px 0;
+  margin: 44px 0 40px 0;
 }
 footer .footer-info img.address {
   width: 264px;
   margin: 50px 0 45px 0;
+}
+footer .copy {
+  padding-bottom: 40px;
+  text-align: center;
 }/*# sourceMappingURL=style.css.map */

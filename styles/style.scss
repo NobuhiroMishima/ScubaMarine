@@ -1,5 +1,9 @@
 @use 'component' as *;
 
+body{
+    font-family:'メイリオ', sans-serif;
+}
+
 header{
     box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.16);
     overflow: hidden;
@@ -37,7 +41,7 @@ header{
             & a{
                 display: inline-block;
                 &:first-child{
-                    margin-right: 10px;
+                    margin-right: 18px;
                 }
     
                 & .address{
@@ -53,13 +57,12 @@ header{
     }
     
     & .mainvisual{
-        text-align: center;
         border-top: 3px solid $cBorder-color-mv;
         border-bottom: 3px solid $cBorder-color-mv;
-        height: 352px;
     
         & img{
-            display: inline;
+            display: block;
+            margin: 0 auto;
         }
     }
     
@@ -112,7 +115,8 @@ header{
         position: relative;
         padding-left: 27px;
         height: 50px;
-        line-height: 50px;
+        line-height: 55px;
+        @extend .font-xl-bold;
 
         &::before{
             content: '';
@@ -128,9 +132,9 @@ header{
     & h3{
         position: relative;
         padding-left: 17px;
-        height: 30px;
         line-height: 30px;
         margin-bottom: 10px;
+        @extend .font-xl-bold;
 
         &::before{
             content: '';
@@ -144,7 +148,7 @@ header{
     }
 
     & main{
-        width: 74%;
+        width: 72%;
 
         //セクション共通のレイアウト
         & section{
@@ -179,7 +183,7 @@ header{
                 background-color: $cOrange;
                 color: $cWhite;
                 text-decoration: none;
-                line-height: 37px;
+                line-height: 40px;
                 margin-top: 12px;
                 margin-left: auto;
                 border-radius: 6px;
@@ -217,11 +221,16 @@ header{
         & .course{
             & .description{
                 margin: 20px 0;
+                @extend .font-md-regular;
             }
     
             & .course-item{
                 display: flex;
                 justify-content: space-between;
+
+                & img{
+                    width: 32%;
+                }
             }
         }
     
@@ -234,12 +243,17 @@ header{
                     padding: 25px;
                     border: 1px solid $cBorder-color-voice;
                     margin-bottom: 25px;
+
+                    & img{
+                        height: 100%;
+                    }
     
                     & .item{
                         margin-left: 25px;
     
                         & h4{
-                            height: 36px;
+                            // height: 36px;
+                            padding-bottom: 5px;
                             color: $cBlue;
                             @extend .font-xl-bold;
                             line-height: 30.8px;
@@ -303,7 +317,7 @@ header{
     }
 
     & aside{
-        width: 24%;
+        width: 26%;
         //セクション共通のレイアウト
         & section{
             margin-bottom: 30px;
@@ -367,10 +381,9 @@ footer{
         & ul{
             max-width: $max-width-body;
             margin: 0 auto; 
-            padding: 19.5px 0;
+            padding: 19.5px 15px;
 
             list-style: none;
-            padding-left: 0;
             display: flex;
     
             & li{
@@ -383,7 +396,7 @@ footer{
                     text-decoration: none;
                     padding: 12px 0px;
                     border-left: 1px solid $cWhite;
-                    @extend .font-md-bold;
+                    @extend .font-sm-bold;
                     color: $cWhite;
                 }
     
@@ -402,22 +415,29 @@ footer{
         max-width: $max-width-body;
         margin: 0 auto; 
         text-align: center;
+        display: flex;
+        justify-content: space-evenly;
 
         & img{
-            display: inline-block;
-
 
             &.logo{
                 width: 300px;
-                margin: 44px 64px 40px 0;
+                margin: 44px 0 40px 0;
             }
             &.address{
                 width: 264px;
                 margin: 50px 0 45px 0;
             }
         }
+    }
 
+    & .copy{
+        padding-bottom: 40px;
+        text-align: center;
 
+        & p{
+            @extend .font-sm-regular;
+        }
     }
 }
 
