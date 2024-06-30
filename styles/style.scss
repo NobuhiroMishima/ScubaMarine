@@ -103,7 +103,97 @@ header{
     margin-top: 40px;
     padding: 0 16px;
 
+    //見出し共通のレイアウト
+    & h2{
+        background-color: $cPaleGreen;
+        position: relative;
+        padding-left: 27px;
+        height: 50px;
+        line-height: 50px;
+
+        &::before{
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 7px;
+            height: 30px;
+            background-color: $cBlue;
+        }
+    }
+
     .new{
+        margin-bottom: 40px;
+        & dl{
+            margin-top: 21px;
+
+            & dt{
+                color: $cGray;
+                @extend .font-md-regular;
+                margin-bottom: 4px;
+            }
+
+            & dd{
+                color: $cBlue;
+                @extend .font-xl-bold;
+                margin-bottom: 16px;
+            }
+        }
+
+        & a{
+            display: block;
+            position: relative;
+            width: 190px;
+            height: 37px;
+            @extend .font-sm-bold;
+            padding-left: 38px;
+            background-color: $cOrange;
+            color: $cWhite;
+            text-decoration: none;
+            line-height: 37px;
+            margin-top: 12px;
+            margin-left: auto;
+            border-radius: 6px;
+
+            &::before{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                width: 10px;
+                height: 2px;
+                background-color: $cWhite;
+                transform: translateY(-50%) rotate(-30deg);
+                transform-origin: right;
+
+            }
+
+            &::after{
+                display: block;
+                content: '';
+                position: absolute;
+                top: 50%;
+                right: 20px;
+                width: 10px;
+                height: 2px;
+                background-color: $cWhite;
+                transform: translateY(-50%) rotate(30deg);
+                transform-origin: right;
+
+            }
+        }
+    }
+
+    .course{
+
+    }
+
+    .voice{
+
+    }
+
+    .store-info{
 
     }
 }

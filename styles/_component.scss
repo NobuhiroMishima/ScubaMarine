@@ -4,6 +4,10 @@ $max-width-body: 1000px;
 $cBlue: #00A0E9;
 $cWhite: white;
 $cBlack: #333333;
+$cPaleGreen: #E7ECD5;
+$cGray: #AAAAAA;
+$cOrange: #F39800;
+
 $cBorder-color-mv: #EBECE7;
 $cBorder-color-nav: #CCCCCC;
 
@@ -26,8 +30,15 @@ $cBorder-color-nav: #CCCCCC;
 
 .font-sm-bold{
     font-size: 14px;
+    font-weight: 600;
 }
 
 .font-md-bold{
     font-size: 16px;
+    font-weight: 600;
+}
+
+.font-xl-bold{
+    font-size: 22px;
+    font-weight: 600;
 }
