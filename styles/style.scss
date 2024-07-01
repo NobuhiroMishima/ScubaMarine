@@ -5,47 +5,108 @@ body{
 }
 
 header{
-    box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.16);
-    overflow: hidden;
+
+    @media screen and (min-width: $breakPoint){
+        box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.16);
+        overflow: hidden;
+    }
+    
 
     & .head-bar{
         background-color: $cBlue;
-        height: 26px;
+        height: 53px;
+        @media screen and (min-width: $breakPoint){
+            height: 26px;
+        }
     
         & p{
             color: $cWhite;
             @extend .font-sm-regular;
             max-width: $max-width-body;
+            padding: 0 5px;
             margin: 0 auto;
-            padding: 0 16px;
             line-height: 26px;
+            @media screen and (min-width: $breakPoint){
+                display: block;
+            }
+
+            & .visible-sp {
+                display: block;
+
+                @media (min-width: $breakPoint) {
+                    display: none;
+                }
+            }
+            
+
         }
     }
     
     & .head-title{
         display: flex;
-        justify-content: space-between;
-        max-width: $max-width-head;
+        flex-direction: column;
         margin: 0 auto;
+        max-width: $max-width-head;
+        padding: 0 16px;
+
+        @media screen and (min-width: $breakPoint){
+            flex-direction: row;
+            justify-content: space-between;
+            padding: 0;
+        }
     
         & h1{
-            height: 98px;
+            height: 65px;
             display: flex;
             align-items: center;
+            justify-content: center;
+            @media screen and (min-width: $breakPoint){
+                height: 98px;
+                text-align: start;
+            }
+
+            & img{
+                width: 176px;
+
+                @media screen and (min-width: $breakPoint){
+                    width: auto;
+                }
+            }
+
         }
     
     
         & .store-info{
             display: flex;
+            justify-content: space-between;
             align-items: center;
             & a{
                 display: inline-block;
+                width: 48%;
+
                 &:first-child{
-                    margin-right: 18px;
+                    @media screen and (min-width: $breakPoint){
+                        margin-right: 18px;
+                    }
                 }
     
                 & .address{
                     width: 264px;
+                    &.visible-sp{
+                        display: block;
+                    }
+                    &.visible-pc{ 
+                        display: none;
+                    }
+
+                    @media screen and (min-width: $breakPoint){
+                        &.visible-sp{
+                            display: none;
+                        }
+                        &.visible-pc{ 
+                            display: block;
+                        }
+                    }
                 }
         
                 & .reserve{
@@ -54,6 +115,39 @@ header{
             }
     
         }
+    }
+
+    & .head-cover{
+        height: 47px;
+        background-color: $cBlue;
+        margin: 10px 16px;
+        position: relative;
+        @media screen and (min-width: $breakPoint){
+            display: none;
+        }
+
+        & .menu-sp{
+            position: absolute;
+            width: 30px;
+            height: 27px;
+            top: 10px;
+            right: 10px;
+
+            & span{
+                position: absolute;
+                width: 30px;
+                height: 5px;
+                background-color: $cWhite;
+    
+                &:nth-child(2){
+                    top: 11px;
+                }
+                &:nth-child(3){
+                    top: 22px;
+                }
+            }
+        }
+
     }
     
     & .mainvisual{
@@ -67,9 +161,13 @@ header{
     }
     
     & .nav-menu{
+        display: none;
         max-width: $max-width-body;
         margin: 23px auto 24px auto; 
         padding: 0 16px;
+        @media screen and (min-width: $breakPoint){
+            display: block;
+        }
     
         & ul{
             list-style: none;

@@ -34,47 +34,138 @@ body {
   font-family: "メイリオ", sans-serif;
 }
 
-header {
-  box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.16);
-  overflow: hidden;
+@media screen and (min-width: 640px) {
+  header {
+    box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.16);
+    overflow: hidden;
+  }
 }
 header .head-bar {
   background-color: #00A0E9;
-  height: 26px;
+  height: 53px;
+}
+@media screen and (min-width: 640px) {
+  header .head-bar {
+    height: 26px;
+  }
 }
 header .head-bar p {
   color: white;
   max-width: 1032px;
+  padding: 0 5px;
   margin: 0 auto;
-  padding: 0 16px;
   line-height: 26px;
+}
+@media screen and (min-width: 640px) {
+  header .head-bar p {
+    display: block;
+  }
+}
+header .head-bar p .visible-sp {
+  display: block;
+}
+@media (min-width: 640px) {
+  header .head-bar p .visible-sp {
+    display: none;
+  }
 }
 header .head-title {
   display: flex;
-  justify-content: space-between;
-  max-width: 1300px;
+  flex-direction: column;
   margin: 0 auto;
+  max-width: 1300px;
+  padding: 0 16px;
+}
+@media screen and (min-width: 640px) {
+  header .head-title {
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 0;
+  }
 }
 header .head-title h1 {
-  height: 98px;
+  height: 65px;
   display: flex;
   align-items: center;
+  justify-content: center;
+}
+@media screen and (min-width: 640px) {
+  header .head-title h1 {
+    height: 98px;
+    text-align: start;
+  }
+}
+header .head-title h1 img {
+  width: 176px;
+}
+@media screen and (min-width: 640px) {
+  header .head-title h1 img {
+    width: auto;
+  }
 }
 header .head-title .store-info {
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
 header .head-title .store-info a {
   display: inline-block;
+  width: 48%;
 }
-header .head-title .store-info a:first-child {
-  margin-right: 18px;
+@media screen and (min-width: 640px) {
+  header .head-title .store-info a:first-child {
+    margin-right: 18px;
+  }
 }
 header .head-title .store-info a .address {
   width: 264px;
 }
+header .head-title .store-info a .address.visible-sp {
+  display: block;
+}
+header .head-title .store-info a .address.visible-pc {
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  header .head-title .store-info a .address.visible-sp {
+    display: none;
+  }
+  header .head-title .store-info a .address.visible-pc {
+    display: block;
+  }
+}
 header .head-title .store-info a .reserve {
   width: 335px;
+}
+header .head-cover {
+  height: 47px;
+  background-color: #00A0E9;
+  margin: 10px 16px;
+  position: relative;
+}
+@media screen and (min-width: 640px) {
+  header .head-cover {
+    display: none;
+  }
+}
+header .head-cover .menu-sp {
+  position: absolute;
+  width: 30px;
+  height: 27px;
+  top: 10px;
+  right: 10px;
+}
+header .head-cover .menu-sp span {
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  background-color: white;
+}
+header .head-cover .menu-sp span:nth-child(2) {
+  top: 11px;
+}
+header .head-cover .menu-sp span:nth-child(3) {
+  top: 22px;
 }
 header .mainvisual {
   border-top: 3px solid #EBECE7;
@@ -85,9 +176,15 @@ header .mainvisual img {
   margin: 0 auto;
 }
 header .nav-menu {
+  display: none;
   max-width: 1032px;
   margin: 23px auto 24px auto;
   padding: 0 16px;
+}
+@media screen and (min-width: 640px) {
+  header .nav-menu {
+    display: block;
+  }
 }
 header .nav-menu ul {
   list-style: none;
