@@ -4,6 +4,39 @@ body{
     font-family:'メイリオ', sans-serif;
 }
 
+.menu-cover{
+    height: 47px;
+    background-color: $cBlue;
+    margin: 10px 16px;
+    position: relative;
+    @media screen and (min-width: $breakPoint){
+        display: none;
+    }
+
+    & .menu-sp{
+        position: absolute;
+        width: 30px;
+        height: 27px;
+        top: 10px;
+        right: 10px;
+
+        & span{
+            position: absolute;
+            width: 30px;
+            height: 5px;
+            background-color: $cWhite;
+
+            &:nth-child(2){
+                top: 11px;
+            }
+            &:nth-child(3){
+                top: 22px;
+            }
+        }
+    }
+
+}
+
 header{
 
     @media screen and (min-width: $breakPoint){
@@ -116,47 +149,31 @@ header{
     
         }
     }
-
-    & .head-cover{
-        height: 47px;
-        background-color: $cBlue;
-        margin: 10px 16px;
-        position: relative;
-        @media screen and (min-width: $breakPoint){
-            display: none;
-        }
-
-        & .menu-sp{
-            position: absolute;
-            width: 30px;
-            height: 27px;
-            top: 10px;
-            right: 10px;
-
-            & span{
-                position: absolute;
-                width: 30px;
-                height: 5px;
-                background-color: $cWhite;
-    
-                &:nth-child(2){
-                    top: 11px;
-                }
-                &:nth-child(3){
-                    top: 22px;
-                }
-            }
-        }
-
-    }
     
     & .mainvisual{
-        border-top: 3px solid $cBorder-color-mv;
-        border-bottom: 3px solid $cBorder-color-mv;
+        @media screen and (min-width: $breakPoint){
+            border-top: 3px solid $cBorder-color-mv;
+            border-bottom: 3px solid $cBorder-color-mv;
+        }
     
         & img{
-            display: block;
             margin: 0 auto;
+
+            &.visible-sp{
+                display: block;
+                width: 100%;
+            }
+            &.visible-pc{
+                display: none;
+            }
+            @media screen and (min-width: $breakPoint){
+                &.visible-sp{
+                    display: none;
+                }
+                &.visible-pc{
+                    display: block;
+                }
+            }
         }
     }
     
@@ -202,10 +219,16 @@ header{
 
 .container{
     max-width: $max-width-body;
-    margin: 40px auto 160px auto;
+    margin: 20px auto;
     padding: 0 16px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+
+    @media screen and (min-width: $breakPoint){
+        margin: 40px auto 140px auto;
+        flex-direction: row;
+        justify-content: space-between;
+    }
 
     //見出し共通のレイアウト
     & h2{
@@ -246,7 +269,9 @@ header{
     }
 
     & main{
-        width: 72%;
+        @media screen and (min-width: $breakPoint){
+            width: 72%;
+        }
 
         //セクション共通のレイアウト
         & section{
@@ -333,17 +358,33 @@ header{
         }
     
         & .voice{
+            margin-bottom: 30px;
+            @media screen and (min-width: $breakPoint){
+                margin-bottom: 40px;
+            }
             & .content{
                 margin-top: 24px;
     
                 & article{
                     display: flex;
-                    padding: 25px;
+                    flex-direction: column;
+                    padding: 16px;
                     border: 1px solid $cBorder-color-voice;
                     margin-bottom: 25px;
 
+                    @media screen and (min-width: $breakPoint){
+                        flex-direction: row;
+                        padding: 25px;
+                    }
+
                     & img{
-                        height: 100%;
+                        width: 178px;
+                        height: 178px;
+                        margin: 0 auto 16px auto;
+                        @media screen and (min-width: $breakPoint){
+                            width: 100%;
+                            height: 100%;
+                        }
                     }
     
                     & .item{
@@ -386,11 +427,14 @@ header{
         }
     
         & .store-info{
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border: 1px solid $cBorder-color-voice;
-            padding: 35px;
+            display: none;
+            @media screen and (min-width: $breakPoint){
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                border: 1px solid $cBorder-color-voice;
+                padding: 35px;
+            }
             
     
             & a{
@@ -415,17 +459,32 @@ header{
     }
 
     & aside{
-        width: 26%;
+        @media screen and (min-width: $breakPoint){
+            width: 26%;
+        }
         //セクション共通のレイアウト
         & section{
             margin-bottom: 30px;
         }
 
         & > img{
+            width: 100%;
             margin-bottom: 30px;
         }
 
+        & iframe{
+            width: 100%;
+            height: 208px; 
+            @media screen and (min-width: $breakPoint){
+                width: 100%;
+                height: 100%; 
+            }
+        }
+
         & .shop{
+            & img{
+                width: 100%;
+            }
             & ul{
                 list-style: none;
                 padding-left: 0;
@@ -473,7 +532,12 @@ header{
 
 footer{
     & .nav-menu{
-        background-color: $cBlue;
+        display: none;
+
+        @media screen and (min-width: $breakPoint){
+            background-color: $cBlue;
+            display: block;
+        }
 
     
         & ul{
@@ -509,6 +573,26 @@ footer{
         }
     }
 
+    & .store-info{
+        margin: 0 auto;
+        padding: 0 16px;
+
+        & img{
+            margin: 0 auto;
+            &.address{
+                width: 80%;
+                margin-bottom: 20px;
+            }
+            &.contact{
+                margin-bottom: 20px;
+            }
+        }
+
+        @media screen and (min-width: $breakPoint){
+            display: none;
+        }
+    }
+
     & .footer-info{
         max-width: $max-width-body;
         margin: 0 auto; 
@@ -517,14 +601,19 @@ footer{
         justify-content: space-evenly;
 
         & img{
+            width: 45%;
 
             &.logo{
-                width: 300px;
                 margin: 44px 0 40px 0;
+                @media screen and (min-width: $breakPoint){
+                    width: 300px;
+                }
             }
             &.address{
-                width: 264px;
                 margin: 50px 0 45px 0;
+                @media screen and (min-width: $breakPoint){
+                    width: 264px;
+                }
             }
         }
     }

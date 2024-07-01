@@ -34,6 +34,37 @@ body {
   font-family: "メイリオ", sans-serif;
 }
 
+.menu-cover {
+  height: 47px;
+  background-color: #00A0E9;
+  margin: 10px 16px;
+  position: relative;
+}
+@media screen and (min-width: 640px) {
+  .menu-cover {
+    display: none;
+  }
+}
+.menu-cover .menu-sp {
+  position: absolute;
+  width: 30px;
+  height: 27px;
+  top: 10px;
+  right: 10px;
+}
+.menu-cover .menu-sp span {
+  position: absolute;
+  width: 30px;
+  height: 5px;
+  background-color: white;
+}
+.menu-cover .menu-sp span:nth-child(2) {
+  top: 11px;
+}
+.menu-cover .menu-sp span:nth-child(3) {
+  top: 22px;
+}
+
 @media screen and (min-width: 640px) {
   header {
     box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.16);
@@ -137,43 +168,29 @@ header .head-title .store-info a .address.visible-pc {
 header .head-title .store-info a .reserve {
   width: 335px;
 }
-header .head-cover {
-  height: 47px;
-  background-color: #00A0E9;
-  margin: 10px 16px;
-  position: relative;
-}
 @media screen and (min-width: 640px) {
-  header .head-cover {
-    display: none;
+  header .mainvisual {
+    border-top: 3px solid #EBECE7;
+    border-bottom: 3px solid #EBECE7;
   }
 }
-header .head-cover .menu-sp {
-  position: absolute;
-  width: 30px;
-  height: 27px;
-  top: 10px;
-  right: 10px;
-}
-header .head-cover .menu-sp span {
-  position: absolute;
-  width: 30px;
-  height: 5px;
-  background-color: white;
-}
-header .head-cover .menu-sp span:nth-child(2) {
-  top: 11px;
-}
-header .head-cover .menu-sp span:nth-child(3) {
-  top: 22px;
-}
-header .mainvisual {
-  border-top: 3px solid #EBECE7;
-  border-bottom: 3px solid #EBECE7;
-}
 header .mainvisual img {
-  display: block;
   margin: 0 auto;
+}
+header .mainvisual img.visible-sp {
+  display: block;
+  width: 100%;
+}
+header .mainvisual img.visible-pc {
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  header .mainvisual img.visible-sp {
+    display: none;
+  }
+  header .mainvisual img.visible-pc {
+    display: block;
+  }
 }
 header .nav-menu {
   display: none;
@@ -209,10 +226,17 @@ header .nav-menu ul li:last-child a {
 
 .container {
   max-width: 1032px;
-  margin: 40px auto 160px auto;
+  margin: 20px auto;
   padding: 0 16px;
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
+}
+@media screen and (min-width: 640px) {
+  .container {
+    margin: 40px auto 140px auto;
+    flex-direction: row;
+    justify-content: space-between;
+  }
 }
 .container h2 {
   background-color: #E7ECD5;
@@ -245,8 +269,10 @@ header .nav-menu ul li:last-child a {
   height: 100%;
   background-color: #00A0E9;
 }
-.container main {
-  width: 72%;
+@media screen and (min-width: 640px) {
+  .container main {
+    width: 72%;
+  }
 }
 .container main section {
   margin-bottom: 40px;
@@ -310,17 +336,40 @@ header .nav-menu ul li:last-child a {
 .container main .course .course-item img {
   width: 32%;
 }
+.container main .voice {
+  margin-bottom: 30px;
+}
+@media screen and (min-width: 640px) {
+  .container main .voice {
+    margin-bottom: 40px;
+  }
+}
 .container main .voice .content {
   margin-top: 24px;
 }
 .container main .voice .content article {
   display: flex;
-  padding: 25px;
+  flex-direction: column;
+  padding: 16px;
   border: 1px solid #CECEBF;
   margin-bottom: 25px;
 }
+@media screen and (min-width: 640px) {
+  .container main .voice .content article {
+    flex-direction: row;
+    padding: 25px;
+  }
+}
 .container main .voice .content article img {
-  height: 100%;
+  width: 178px;
+  height: 178px;
+  margin: 0 auto 16px auto;
+}
+@media screen and (min-width: 640px) {
+  .container main .voice .content article img {
+    width: 100%;
+    height: 100%;
+  }
 }
 .container main .voice .content article .item {
   margin-left: 25px;
@@ -349,11 +398,16 @@ header .nav-menu ul li:last-child a {
   text-align: end;
 }
 .container main .store-info {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  border: 1px solid #CECEBF;
-  padding: 35px;
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  .container main .store-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #CECEBF;
+    padding: 35px;
+  }
 }
 .container main .store-info a:first-child {
   width: 264px;
@@ -369,14 +423,30 @@ header .nav-menu ul li:last-child a {
   margin: 0 35px;
   background-color: #CECEBF;
 }
-.container aside {
-  width: 26%;
+@media screen and (min-width: 640px) {
+  .container aside {
+    width: 26%;
+  }
 }
 .container aside section {
   margin-bottom: 30px;
 }
 .container aside > img {
+  width: 100%;
   margin-bottom: 30px;
+}
+.container aside iframe {
+  width: 100%;
+  height: 208px;
+}
+@media screen and (min-width: 640px) {
+  .container aside iframe {
+    width: 100%;
+    height: 100%;
+  }
+}
+.container aside .shop img {
+  width: 100%;
 }
 .container aside .shop ul {
   list-style: none;
@@ -410,7 +480,13 @@ header .nav-menu ul li:last-child a {
 }
 
 footer .nav-menu {
-  background-color: #00A0E9;
+  display: none;
+}
+@media screen and (min-width: 640px) {
+  footer .nav-menu {
+    background-color: #00A0E9;
+    display: block;
+  }
 }
 footer .nav-menu ul {
   max-width: 1032px;
@@ -434,6 +510,25 @@ footer .nav-menu ul li a {
 footer .nav-menu ul li:last-child a {
   border-right: 1px solid #CCCCCC;
 }
+footer .store-info {
+  margin: 0 auto;
+  padding: 0 16px;
+}
+footer .store-info img {
+  margin: 0 auto;
+}
+footer .store-info img.address {
+  width: 80%;
+  margin-bottom: 20px;
+}
+footer .store-info img.contact {
+  margin-bottom: 20px;
+}
+@media screen and (min-width: 640px) {
+  footer .store-info {
+    display: none;
+  }
+}
 footer .footer-info {
   max-width: 1032px;
   margin: 0 auto;
@@ -441,13 +536,24 @@ footer .footer-info {
   display: flex;
   justify-content: space-evenly;
 }
+footer .footer-info img {
+  width: 45%;
+}
 footer .footer-info img.logo {
-  width: 300px;
   margin: 44px 0 40px 0;
 }
+@media screen and (min-width: 640px) {
+  footer .footer-info img.logo {
+    width: 300px;
+  }
+}
 footer .footer-info img.address {
-  width: 264px;
   margin: 50px 0 45px 0;
+}
+@media screen and (min-width: 640px) {
+  footer .footer-info img.address {
+    width: 264px;
+  }
 }
 footer .copy {
   padding-bottom: 40px;
