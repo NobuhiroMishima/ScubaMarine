@@ -8,6 +8,7 @@
     <script src="js/menu.js"></script>
     <link rel="stylesheet" href="styles/css-reset.css" />
     <link rel="stylesheet" href="styles/style.css" />
+    <script src="js/main.js" defer></script>
   </head>
 
   <body>
@@ -17,7 +18,7 @@
       </div>
       <div class="head-title">
         <h1>
-          <img src="images/logo.svg" alt="スキューバ・マリン" />
+          <a href="#"><img src="images/logo.svg" alt="スキューバ・マリン" /></a>
         </h1>
         <div class="store-info">
           <a href="#">
@@ -48,6 +49,17 @@
           <span></span>
         </a>
       </div>
+      <nav class="nav-menu-sp visible-sp">
+        <ul>
+          <li><a href="#">トップ</a></li>
+          <li><a href="#">店舗</a></li>
+          <li><a href="#">コース一覧</a></li>
+          <li><a href="#">スタッフ</a></li>
+          <li><a href="#">お客様の声</a></li>
+          <li><a href="#">Q&A</a></li>
+          <li><a href="#">お問合せ</a></li>
+        </ul>
+      </nav>
       <div class="mainvisual">
         <img class="visible-pc" src="images/mainvisual-pc.png" />
         <img class="visible-sp" src="images/mainvisual-sp.png" />
@@ -85,18 +97,24 @@
             当店の人気コースをご紹介します。<br />経験豊富なインストラクターがガイドしますので、お楽しみいただけます！
           </div>
           <div class="course-item">
-            <img
+            <a href="#">
+              <img
               src="images/course1.png"
               alt="入門コース（初めてのスキューバダイビング）"
             />
-            <img
+            </a>
+            <a href="#">
+              <img
               src="images/course2.png"
               alt="青の洞窟コース（青の洞窟を自由に散策）"
             />
-            <img
+            </a>
+            <a href="#">
+              <img
               src="images/course3.png"
               alt="1日フリーコース（丸1日沖縄の海を楽しめる）"
             />
+            </a>
           </div>
         </section>
         <section class="voice">
@@ -153,7 +171,9 @@
         </div>
       </main>
       <aside>
-        <img src="images/reservation-btn.png" alt="ご予約はこちら" />
+        <a href="">
+          <img src="images/reservation-btn.png" alt="ご予約はこちら" />
+        </a>
         <section class="movie">
           <h3>体験の様子を見る</h3>
           <iframe src="https://www.youtube.com/embed/JOfoPFH3DYc?si=LpacY3LG6zCrAO2Z" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
@@ -183,7 +203,9 @@
           <img src="images/banner-sample2.jpg">
           <img src="images/banner-sample3.jpg">
         </div>
-        <img src="images/online-store.png" alt="オンラインストアを見る">
+        <a href="">
+          <img src="images/online-store.png" alt="オンラインストアを見る">
+        </a>
       </aside>
     </div>
 

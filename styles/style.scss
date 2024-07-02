@@ -149,6 +149,49 @@ header{
     
         }
     }
+
+    & .nav-menu-sp{
+        display: none;
+
+        @media screen and (min-width: $breakPoint){
+            display: none !important;
+        }
+
+        &.menu-open{
+            display: block;
+            margin: 28px 0 30px 0;
+            padding: 0 16px;
+    
+            & ul{
+                list-style: none;
+                padding-left: 0;
+    
+                & li{
+                    margin-bottom: 7px;
+    
+    
+                    & a{
+                        text-decoration: none;
+                        color: $cBlack;
+                        @extend .font-2xl-bold;
+                        position: relative;
+                        left: 38px;
+    
+                        &::before{
+                            content: '';
+                            background-image: url("../images/nav-icon.svg");
+                            width: 28px;
+                            height: 28px;
+                            position: absolute;
+                            top: 2px;
+                            left: -38px;
+                        }
+                    }
+                }
+            }
+        }
+        
+    }
     
     & .mainvisual{
         @media screen and (min-width: $breakPoint){
@@ -351,7 +394,7 @@ header{
                 display: flex;
                 justify-content: space-between;
 
-                & img{
+                & a{
                     width: 32%;
                 }
             }
@@ -467,7 +510,8 @@ header{
             margin-bottom: 30px;
         }
 
-        & > img{
+        & > a{
+            display: block;
             width: 100%;
             margin-bottom: 30px;
         }
