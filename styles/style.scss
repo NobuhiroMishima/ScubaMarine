@@ -15,6 +15,7 @@ body{
 
     & .menu-sp{
         position: absolute;
+        cursor: pointer;
         width: 30px;
         height: 27px;
         top: 10px;
@@ -37,12 +38,50 @@ body{
 
 }
 
-header{
+.nav-menu-sp{
+    display: none;
 
     @media screen and (min-width: $breakPoint){
-        box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.16);
-        overflow: hidden;
+        display: none !important;
     }
+
+    &.menu-open{
+        display: block;
+        margin: 28px 0 30px 0;
+        padding: 0 16px;
+
+        & ul{
+            list-style: none;
+            padding-left: 0;
+
+            & li{
+                margin-bottom: 7px;
+
+
+                & a{
+                    text-decoration: none;
+                    color: $cBlack;
+                    @extend .font-2xl-bold;
+                    position: relative;
+                    left: 38px;
+
+                    &::before{
+                        content: '';
+                        background-image: url("../images/nav-icon.svg");
+                        width: 28px;
+                        height: 28px;
+                        position: absolute;
+                        top: 2px;
+                        left: -38px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+header{
     
 
     & .head-bar{
@@ -149,49 +188,6 @@ header{
     
         }
     }
-
-    & .nav-menu-sp{
-        display: none;
-
-        @media screen and (min-width: $breakPoint){
-            display: none !important;
-        }
-
-        &.menu-open{
-            display: block;
-            margin: 28px 0 30px 0;
-            padding: 0 16px;
-    
-            & ul{
-                list-style: none;
-                padding-left: 0;
-    
-                & li{
-                    margin-bottom: 7px;
-    
-    
-                    & a{
-                        text-decoration: none;
-                        color: $cBlack;
-                        @extend .font-2xl-bold;
-                        position: relative;
-                        left: 38px;
-    
-                        &::before{
-                            content: '';
-                            background-image: url("../images/nav-icon.svg");
-                            width: 28px;
-                            height: 28px;
-                            position: absolute;
-                            top: 2px;
-                            left: -38px;
-                        }
-                    }
-                }
-            }
-        }
-        
-    }
     
     & .mainvisual{
         @media screen and (min-width: $breakPoint){
@@ -260,6 +256,15 @@ header{
     }
 }
 
+.bg{
+    background-color: #F5F5F5;
+    overflow: hidden;
+    @media screen and (min-width: $breakPoint){
+        box-shadow: 0 10px 10px -3px rgba(0, 0, 0, 0.16) inset;
+        overflow: hidden;
+    }
+}
+
 .container{
     max-width: $max-width-body;
     margin: 20px auto;
@@ -276,6 +281,7 @@ header{
     //見出し共通のレイアウト
     & h2{
         background-color: $cPaleGreen;
+        color: $cBlack;
         position: relative;
         padding-left: 27px;
         height: 50px;
@@ -294,6 +300,7 @@ header{
     }
 
     & h3{
+        color: $cBlack;
         position: relative;
         padding-left: 17px;
         line-height: 30px;
@@ -313,7 +320,7 @@ header{
 
     & main{
         @media screen and (min-width: $breakPoint){
-            width: 72%;
+            max-width: 72%;
         }
 
         //セクション共通のレイアウト
@@ -387,6 +394,7 @@ header{
         & .course{
             & .description{
                 margin: 20px 0;
+                color: $cBlack;
                 @extend .font-md-regular;
             }
     
@@ -414,6 +422,7 @@ header{
                     padding: 16px;
                     border: 1px solid $cBorder-color-voice;
                     margin-bottom: 25px;
+                    background-color: $cWhite;
 
                     @media screen and (min-width: $breakPoint){
                         flex-direction: row;
@@ -424,14 +433,13 @@ header{
                         width: 178px;
                         height: 178px;
                         margin: 0 auto 16px auto;
-                        @media screen and (min-width: $breakPoint){
-                            width: 100%;
-                            height: 100%;
-                        }
                     }
     
                     & .item{
-                        margin-left: 25px;
+                        @media screen and (min-width: $breakPoint){
+                            margin-left: 25px;
+                        }
+    
     
                         & h4{
                             // height: 36px;
@@ -458,10 +466,12 @@ header{
                             margin-bottom: 40px;
                             @extend .font-md-regular;
                             line-height: 28.8px;
+                            color: $cBlack;
                         }
     
                         & .voice__course{
                             text-align: end;
+                            color: $cBlack;
                             @extend .font-md-regular;
                         }
                     }
@@ -477,6 +487,7 @@ header{
                 align-items: center;
                 border: 1px solid $cBorder-color-voice;
                 padding: 35px;
+                background-color: $cWhite;
             }
             
     
@@ -535,6 +546,7 @@ header{
 
                 & li{
                     margin-top: 10px;
+                    color: $cBlack;
                     @extend .font-sm-regular;
                 }
             }
@@ -558,6 +570,10 @@ header{
                 padding-bottom: 15.5px;
                 position: relative;
                 border-bottom: 1px dotted $cGray;
+                line-height: 37px;
+                @media screen and (min-width: $breakPoint){
+                    line-height: 28px;
+                }
 
             }
         }
@@ -587,7 +603,7 @@ footer{
         & ul{
             max-width: $max-width-body;
             margin: 0 auto; 
-            padding: 19.5px 15px;
+            padding: 15px 19.5px;
 
             list-style: none;
             display: flex;
@@ -600,7 +616,7 @@ footer{
                     display: block;
                     text-align: center;
                     text-decoration: none;
-                    padding: 12px 0px;
+                    padding: 4.5px 0px;
                     border-left: 1px solid $cWhite;
                     @extend .font-sm-bold;
                     color: $cWhite;
@@ -668,6 +684,7 @@ footer{
 
         & p{
             @extend .font-sm-regular;
+            color: $cBlack;
         }
     }
 }
